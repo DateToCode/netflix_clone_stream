@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #141414;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+}
+
+/* ICONS8 */
+
+.icons8__icon {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
+
+.not-inverted {
+  filter: invert(0);
+}
+
+/* ---- NAVBAR ---- */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  padding: 0 4%;
+  min-height: 68px;
+  align-items: center;
+  font-size: small;
+}
+
+.navbar__logo {
+  display: flex;
+
+  align-items: center;
+}
+
+.navbar__logo > img {
+  height: 50px;
+}
+
+.navbar__browse {
+  flex: 1 0 auto;
+  margin-left: 32px;
+}
+
+.navbar__browse > ul {
+  list-style: none;
+}
+
+.navbar__browse > ul > li {
+  display: inline;
+  margin-left: 16px;
+}
+
+.navbar__browse > ul > li:first-child {
+  margin-left: 0;
+}
+
+.navbar__browse > ul > li:not(.navbar__browse--state-selected) > a:hover {
+  color: gray;
+}
+
+.navbar__browse > ul > li > a {
+  text-decoration: none;
+  transition: all 200ms ease-in;
+  color: inherit; /* BLANCO DEL BODY */
+}
+
+.navbar__browse--state-selected {
+  font-weight: bold;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__menu > img {
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.navbar__menu > img:last-child {
+  margin-right: 0;
+}
+
+/* NAVBAR MOBILE */
+
+.navbar__menu__mobile {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 768px) {
+  .navbar__logo {
+    flex: 1 0 auto;
+  }
+  .navbar__browse {
+    display: none;
+  }
+  .navbar__menu {
+    display: none;
+  }
+
+  .navbar__menu__mobile {
+    display: block;
+    position: relative;
+  }
+
+  .navbar__menu__mobile > img {
+    width: 34px;
+    height: auto;
+  }
+
+  .navbar__menu__mobile__list {
+    position: absolute;
+    display: none;
+    border-radius: 4px;
+    background-color: teal;
+  }
+
+  .navbar__menu__mobile__list img {
+    padding: 8px 4px;
+  }
+
+  .navbar__menu__mobile:hover > .navbar__menu__mobile__list {
+    display: block;
+  }
+}
