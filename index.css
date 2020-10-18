@@ -3,10 +3,15 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #141414;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
+  min-height: 200vh;
 }
 
 /* ICONS8 */
@@ -31,6 +36,7 @@ body {
   min-height: 68px;
   align-items: center;
   font-size: small;
+  z-index: 150;
 }
 
 .navbar__logo {
@@ -93,6 +99,104 @@ body {
 
 .navbar__menu__mobile {
   display: none;
+}
+
+/* HEADER SECTION */
+
+.header {
+  position: relative;
+  margin-top: -68px;
+  height: 100vh;
+  width: 100%;
+}
+
+.header > video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.65;
+}
+
+.header__information {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding-left: 50px;
+}
+
+.header__information > * {
+  margin-top: 32px;
+}
+
+.header__information > *:first-child {
+  margin-top: 0;
+}
+
+.header__information__type {
+  display: flex;
+  align-items: center;
+}
+
+.header__information__type > h2 {
+  margin-left: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+
+.header__information__text > h1 {
+  font-size: 100px;
+  width: 40vw;
+  line-height: 90px;
+  height: auto;
+}
+
+.header__information__actions {
+  display: flex;
+}
+
+.header__information__actions > button {
+  margin-left: 16px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  outline: 0;
+  cursor: pointer;
+  padding: 4px 36px;
+  transition: opacity 400ms ease-in;
+}
+
+.header__information__actions > button > img {
+  margin-right: 12px;
+}
+
+.header__information__actions > button:first-child {
+  margin-left: 0;
+}
+
+.header__information__actions > button:last-child {
+  background-color: rgba(109, 109, 110, 0.7);
+  color: white;
+}
+
+.header__information__actions > button:hover {
+  opacity: 0.5;
+}
+
+/* MAIN SECTION */
+.main {
+  position: relative;
+  margin-top: -20vh;
+  background: linear-gradient(to bottom, transparent 6vh, #141414 20vh);
+}
+
+.main__section__carousel {
+  display: flex;
 }
 
 /* MEDIA QUERIES */
