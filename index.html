@@ -19,7 +19,13 @@
               <li><a href="#milista">Mi lista</a></li>
           </ul></div>
           <div class="navbar__menu">
-            <img class="icons8__icon" src="https://img.icons8.com/android/24/000000/search.png" alt="">
+            <div class="navbar__menu__search">
+              <div class="search__list__container" id="searchListContainer">
+                <ul id="searchList"></ul>
+              </div>
+              <input type="text" id="searchInput" autocomplete="off">
+              <img class="icons8__icon" src="https://img.icons8.com/android/24/000000/search.png" alt="" id="searchIcon" onclick="clickSearchIcon()">
+            </div>
             <img class="icons8__icon" src="https://img.icons8.com/fluent-systems-regular/24/000000/gift.png" alt="">
             <img class="icons8__icon" src="https://img.icons8.com/material-sharp/24/000000/bell.png" alt="">
             <img class="icons8__icon not-inverted" src="https://img.icons8.com/plasticine/100/000000/person-male.png" alt="">
@@ -35,7 +41,7 @@
         </div>
       </div>
       <div class="header">
-        <video src="assets/video/vid.mp4" muted autoplay></video>
+        <video src="assets/video/vid.mp4" muted ></video>
         <div class="header__information">
           <div class="header__information__type">
             <img src="assets/img/c.png" alt="">
@@ -141,5 +147,6 @@
           <p>© 1997-2020 ChinoFlix, Inc. { Datos sensibles }</p>
         </div>
       </footer>
+      <script src="index.js"></script>
   </body>
 </html>
